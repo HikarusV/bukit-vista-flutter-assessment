@@ -1,7 +1,9 @@
 class User {
   User({
-    required this.id,
-    required this.name,
+    required this.userId,
+    required this.firstName,
+    required this.lastName,
+    required this.fullName,
     required this.photoUrl,
     required this.city,
     required this.country,
@@ -9,8 +11,10 @@ class User {
     required this.phone,
     required this.firstFollow,
   });
-  late final int id;
-  late final String name;
+  late final int userId;
+  late final String firstName;
+  late final String lastName;
+  late final String fullName;
   late final String photoUrl;
   late final String city;
   late final String country;
@@ -19,8 +23,10 @@ class User {
   late final String firstFollow;
 
   User.fromJson(Map<String, dynamic> json) {
-    id = json['user_id'];
-    name = json['name'];
+    userId = json['user_id'];
+    firstName = json['first_name'];
+    lastName = json['last_name'];
+    fullName = json['full_name'];
     photoUrl = json['photo_url'];
     city = json['city'];
     country = json['country'];
@@ -30,15 +36,17 @@ class User {
   }
 
   Map<String, dynamic> toJson() {
-    final data = <String, dynamic>{};
-    data['user_id'] = id;
-    data['name'] = name;
-    data['photo_url'] = photoUrl;
-    data['city'] = city;
-    data['country'] = country;
-    data['email'] = email;
-    data['phone'] = phone;
-    data['first_follow'] = firstFollow;
-    return data;
+    final _data = <String, dynamic>{};
+    _data['user_id'] = userId;
+    _data['first_name'] = firstName;
+    _data['last_name'] = lastName;
+    _data['full_name'] = fullName;
+    _data['photo_url'] = photoUrl;
+    _data['city'] = city;
+    _data['country'] = country;
+    _data['email'] = email;
+    _data['phone'] = phone;
+    _data['first_follow'] = firstFollow;
+    return _data;
   }
 }
