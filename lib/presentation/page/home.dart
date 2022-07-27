@@ -1,14 +1,16 @@
 import 'package:bukitvistaflutterassessment/common/style.dart';
 import 'package:bukitvistaflutterassessment/data/model/user.dart';
 import 'package:bukitvistaflutterassessment/data/userdata_parse.dart';
-import 'package:bukitvistaflutterassessment/presentation/page/x2.dart';
+import 'package:bukitvistaflutterassessment/presentation/page/detail.dart';
+import 'package:bukitvistaflutterassessment/presentation/widget/custom_appbar.dart';
 import 'package:bukitvistaflutterassessment/presentation/widget/home/filter_button.dart';
 import 'package:bukitvistaflutterassessment/presentation/widget/home/search_box.dart';
+import 'package:bukitvistaflutterassessment/presentation/widget/home/search_grup.dart';
 import 'package:bukitvistaflutterassessment/presentation/widget/home/user_card.dart';
 import 'package:flutter/material.dart';
 
-class X1Page extends StatelessWidget {
-  const X1Page({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,32 +18,10 @@ class X1Page extends StatelessWidget {
         List.from(parseUserData.map((model) => User.fromJson(model)));
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(
-        toolbarHeight: 99,
-        title: Text(
-          'Guest Details',
-          style: titleText,
-        ),
-        centerTitle: true,
-        leading: Container(),
-        bottom: PreferredSize(
-          preferredSize: const Size(375, 91),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 29, right: 29, bottom: 33),
-            child: Row(
-              children: const [
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 10),
-                    child: SearchBox(),
-                  ),
-                ),
-                FilterButton()
-              ],
-            ),
-          ),
-        ),
-      ),
+      appBar: CustomAppBar(
+        title: 'Guest List',
+        bottom: SearchGroup.searchBoxGroupWidget(),
+      ).customAppBarWidget(),
       body: ListView.builder(
         itemCount: response.length,
         padding: const EdgeInsets.only(
@@ -60,7 +40,8 @@ class X1Page extends StatelessWidget {
               Navigator.push(
                 context,
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => X2(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      Detail(
                     userTarget: response[index],
                   ),
                   transitionsBuilder:
