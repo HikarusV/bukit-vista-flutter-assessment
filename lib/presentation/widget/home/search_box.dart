@@ -20,10 +20,13 @@ class SearchBox extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          const Positioned(
+          Positioned(
             top: 0,
             bottom: 0,
-            child: Icon(Icons.search),
+            child: Icon(
+              Icons.search,
+              color: greyColor,
+            ),
           ),
           TextField(
             onSubmitted: onEventSubmited,

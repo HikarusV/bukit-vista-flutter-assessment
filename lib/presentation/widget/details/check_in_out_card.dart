@@ -48,12 +48,15 @@ class CheckInOutCard extends StatelessWidget {
           Flexible(
             flex: 0,
             child: Column(
-              children: const [
-                Flexible(
+              children: [
+                const Flexible(
                   child: Icon(Icons.nights_stay_outlined),
                 ),
                 Expanded(
-                  child: Text('3 Nights'),
+                  child: Text(
+                    '3 Nights',
+                    style: nightText,
+                  ),
                 )
               ],
             ),

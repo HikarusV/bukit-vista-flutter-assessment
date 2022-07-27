@@ -99,7 +99,7 @@ class BookingCard extends StatelessWidget {
                     children: [
                       Text(
                         bookData.nameProfile,
-                        style: titleContentText,
+                        style: bookingContentText,
                       ),
                       const SizedBox(
                         height: 8,

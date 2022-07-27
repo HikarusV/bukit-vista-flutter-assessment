@@ -11,7 +11,7 @@ class CustomTabBar extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.0),
         border: Border(
-          bottom: BorderSide(color: greyColor, width: 2),
+          bottom: BorderSide(color: greyColor, width: 1),
         ),
       ),
       child: TabBar(

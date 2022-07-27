@@ -4,13 +4,11 @@ bukit-vista-flutter-assessment
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project for test bukit vista intern
 
-A few resources to get you started if this is your first Flutter project:
+###Notes
+- I couldn't find some matching icons so I used the most similar
+- for some colors, i just use the default font size.
+- I only used the colors listed in figma, and in some cases I found different colors were used, so I used the most similar colors.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+created by Sapta Pradana (26-07-2022 18:00  until  27-07-2022 20:05)

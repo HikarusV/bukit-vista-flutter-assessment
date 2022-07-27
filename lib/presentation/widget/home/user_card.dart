@@ -72,7 +72,9 @@ class UserCard extends StatelessWidget {
                   height: 6,
                 ),
                 Text(
-                  withTap ? '$city, $country' : 'Guest since $firstFollow',
+                  withTap
+                      ? '$city, $country'
+                      : 'Guest since ${firstFollow.substring(3, 6)} ${firstFollow.substring(7, 11)}',
                   style: titlePlaceText,
                 ),
               ],

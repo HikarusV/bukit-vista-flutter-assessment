@@ -51,6 +51,7 @@ class _HomeState extends State<Home> {
                 left: 29,
                 right: 23,
                 top: 24,
+                bottom: 20,
               ),
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.only(top: 9),

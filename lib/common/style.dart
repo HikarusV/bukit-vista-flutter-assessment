@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 TextStyle titleText = const TextStyle(
   fontSize: 18,
   color: Colors.white,
+  fontWeight: FontWeight.w700,
 );
 
 TextStyle titleCardText = TextStyle(
   fontSize: 16,
   color: darkColor,
+  fontWeight: FontWeight.w600,
 );
 
 TextStyle titleBookText = TextStyle(
@@ -31,11 +33,25 @@ TextStyle statusCancelText = TextStyle(
 TextStyle titlePlaceText = TextStyle(
   fontSize: 12,
   color: greyColor,
+  fontWeight: FontWeight.w400,
 );
 
 TextStyle titleContentText = TextStyle(
   fontSize: 12,
   color: darkColor,
+  fontWeight: FontWeight.w500,
+);
+
+TextStyle bookingContentText = TextStyle(
+  fontSize: 12,
+  color: darkColor,
+  fontWeight: FontWeight.w400,
+);
+
+TextStyle nightText = TextStyle(
+  fontSize: 12,
+  color: blueColor,
+  fontWeight: FontWeight.w400,
 );
 
 TextStyle hintText = TextStyle(
