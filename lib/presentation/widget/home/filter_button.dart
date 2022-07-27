@@ -1,4 +1,6 @@
+import 'package:bukitvistaflutterassessment/presentation/provider/home_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../common/style.dart';
 
@@ -18,7 +20,7 @@ class FilterButton extends StatelessWidget {
           child: InkWell(
             borderRadius: BorderRadius.circular(8),
             onTap: () {
-              print("tapped");
+              context.read<HomeProvider>().filteredList();
             },
             child: SizedBox(
               width: 40,

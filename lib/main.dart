@@ -1,8 +1,23 @@
-import 'package:bukitvistaflutterassessment/presentation/page/home.dart';
+import 'package:bukitvistaflutterassessment/presentation/main_page.dart';
+import 'package:bukitvistaflutterassessment/presentation/provider/detail_provider.dart';
+import 'package:bukitvistaflutterassessment/presentation/provider/home_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<HomeProvider>(
+          create: (context) => HomeProvider(),
+        ),
+        ChangeNotifierProvider<DetailProvider>(
+          create: (context) => DetailProvider(),
+        )
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      home: const MainPage(),
     );
   }
 }

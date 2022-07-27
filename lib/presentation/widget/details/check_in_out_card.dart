@@ -1,7 +1,7 @@
 import 'package:bukitvistaflutterassessment/common/style.dart';
 import 'package:flutter/material.dart';
 
-import '../../../common/mont_convert.dart';
+import '../../../common/month_convert.dart';
 import '../../../data/model/booking.dart';
 
 class CheckInOutCard extends StatelessWidget {
@@ -10,7 +10,7 @@ class CheckInOutCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 80,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,5 +1,7 @@
 import 'package:bukitvistaflutterassessment/common/style.dart';
+import 'package:bukitvistaflutterassessment/presentation/provider/home_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SearchBox extends StatelessWidget {
   const SearchBox({Key? key, this.onEventSubmited}) : super(key: key);
@@ -25,6 +27,9 @@ class SearchBox extends StatelessWidget {
           ),
           TextField(
             onSubmitted: onEventSubmited,
+            controller: context.read<HomeProvider>().searchController,
+            onChanged: (text) =>
+                context.read<HomeProvider>().serachByName(text),
             decoration: InputDecoration(
               hintText: 'Search your guest name',
               hintStyle: hintText,

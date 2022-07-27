@@ -22,7 +22,7 @@ class User {
   late final String phone;
   late final String firstFollow;
 
-  User.fromJson(Map<String, dynamic> json) {
+  User.fromJson(Map<dynamic, dynamic> json) {
     userId = json['user_id'];
     firstName = json['first_name'];
     lastName = json['last_name'];
@@ -36,17 +36,17 @@ class User {
   }
 
   Map<String, dynamic> toJson() {
-    final _data = <String, dynamic>{};
-    _data['user_id'] = userId;
-    _data['first_name'] = firstName;
-    _data['last_name'] = lastName;
-    _data['full_name'] = fullName;
-    _data['photo_url'] = photoUrl;
-    _data['city'] = city;
-    _data['country'] = country;
-    _data['email'] = email;
-    _data['phone'] = phone;
-    _data['first_follow'] = firstFollow;
-    return _data;
+    final data = <String, dynamic>{};
+    data['user_id'] = userId;
+    data['first_name'] = firstName;
+    data['last_name'] = lastName;
+    data['full_name'] = fullName;
+    data['photo_url'] = photoUrl;
+    data['city'] = city;
+    data['country'] = country;
+    data['email'] = email;
+    data['phone'] = phone;
+    data['first_follow'] = firstFollow;
+    return data;
   }
 }

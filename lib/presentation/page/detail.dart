@@ -19,7 +19,9 @@ class Detail extends StatelessWidget {
       length: 3,
       child: Scaffold(
         backgroundColor: backgroundColor,
-        appBar: const CustomAppBar(title: 'Guest Details').customAppBarWidget(
+        appBar: const CustomAppBar(
+          title: 'Guest Details',
+        ).customAppBarWidget(
           leading: const CustomBackButton(),
         ),
         body: Column(

@@ -18,6 +18,6 @@ String monthConvert(
   ];
 
   return (monthFormat == MonthFormat.digits3)
-      ? monthList[month].substring(0, 3)
-      : monthList[month];
+      ? monthList[month - 1].substring(0, 3)
+      : monthList[month - 1];
 }
