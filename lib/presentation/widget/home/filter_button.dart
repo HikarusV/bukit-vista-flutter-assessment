@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../common/style.dart';
+import '../../../common/style.dart';
 
 class FilterButton extends StatelessWidget {
   const FilterButton({Key? key}) : super(key: key);

@@ -2,9 +2,9 @@ import 'package:bukitvistaflutterassessment/common/style.dart';
 import 'package:bukitvistaflutterassessment/data/model/user.dart';
 import 'package:bukitvistaflutterassessment/data/userdata_parse.dart';
 import 'package:bukitvistaflutterassessment/presentation/page/x2.dart';
-import 'package:bukitvistaflutterassessment/presentation/widget/filter_button.dart';
-import 'package:bukitvistaflutterassessment/presentation/widget/search_box.dart';
-import 'package:bukitvistaflutterassessment/presentation/widget/user_card.dart';
+import 'package:bukitvistaflutterassessment/presentation/widget/home/filter_button.dart';
+import 'package:bukitvistaflutterassessment/presentation/widget/home/search_box.dart';
+import 'package:bukitvistaflutterassessment/presentation/widget/home/user_card.dart';
 import 'package:flutter/material.dart';
 
 class X1Page extends StatelessWidget {

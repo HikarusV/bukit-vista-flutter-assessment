@@ -1,5 +1,5 @@
 import 'package:bukitvistaflutterassessment/common/style.dart';
-import 'package:bukitvistaflutterassessment/presentation/page/x2.dart';
+import 'package:bukitvistaflutterassessment/presentation/widget/button_effect.dart';
 import 'package:flutter/material.dart';
 
 class UserCard extends StatelessWidget {
@@ -37,18 +37,12 @@ class UserCard extends StatelessWidget {
             ),
           ],
         ),
-        child: withTap ? buttonEffect(context) : primaryContent(),
-      ),
-    );
-  }
-
-  Widget buttonEffect(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        borderRadius: BorderRadius.circular(8),
-        onTap: onTap,
-        child: primaryContent(),
+        child: withTap
+            ? ButtonEffect(
+                onTap: onTap,
+                child: primaryContent(),
+              )
+            : primaryContent(),
       ),
     );
   }

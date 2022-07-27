@@ -5,14 +5,37 @@ TextStyle titleText = const TextStyle(
   color: Colors.white,
 );
 
-TextStyle titleCardText = const TextStyle(
+TextStyle titleCardText = TextStyle(
   fontSize: 16,
-  color: Colors.black,
+  color: darkColor,
 );
 
-TextStyle titlePlaceText = const TextStyle(
+TextStyle titleBookText = TextStyle(
+  fontSize: 14,
+  color: darkColor,
+  fontWeight: FontWeight.w600,
+);
+
+TextStyle statusConfirmText = TextStyle(
   fontSize: 12,
-  color: Colors.grey,
+  color: greenColor,
+  fontWeight: FontWeight.w500,
+);
+
+TextStyle statusCancelText = TextStyle(
+  fontSize: 12,
+  color: redColor,
+  fontWeight: FontWeight.w500,
+);
+
+TextStyle titlePlaceText = TextStyle(
+  fontSize: 12,
+  color: greyColor,
+);
+
+TextStyle titleContentText = TextStyle(
+  fontSize: 12,
+  color: darkColor,
 );
 
 TextStyle hintText = TextStyle(

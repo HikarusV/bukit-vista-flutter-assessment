@@ -1,6 +1,50 @@
+import 'package:bukitvistaflutterassessment/data/model/booking.dart';
 import 'package:flutter/material.dart';
 
 import 'model/user.dart';
+
+List<Booking> dummyBook = [
+  Booking.fromJson(
+    {
+      "book_id": "1x70fvl0g5",
+      "status": 0,
+      "user_id": 11,
+      "guest": 1,
+      "book_value": "\$134.69",
+      "check_in_year": 2019,
+      "check_in_month": 2,
+      "check_in_date": 14,
+      "check_in_hour": "5:53",
+      "long_day": 1,
+      "check_out_year": 2019,
+      "check_out_month": 2,
+      "check_out_date": 15,
+      "check_out_hour": "11:34",
+      "name_profile": "Delilah Verrell",
+      "host": "Delilah Verrell Bukit Vista"
+    },
+  ),
+  Booking.fromJson(
+    {
+      "book_id": "5j60ibq1g3",
+      "status": 1,
+      "user_id": 16,
+      "guest": 2,
+      "book_value": "\$86.01",
+      "check_in_year": 2020,
+      "check_in_month": 9,
+      "check_in_date": 24,
+      "check_in_hour": "13:25",
+      "long_day": 10,
+      "check_out_year": 2020,
+      "check_out_month": 10,
+      "check_out_date": 4,
+      "check_out_hour": "9:06",
+      "name_profile": "Abbott Pendrid",
+      "host": "Abbott Pendrid Bukit Vista"
+    },
+  )
+];
 
 List parseUserData = [
   {
